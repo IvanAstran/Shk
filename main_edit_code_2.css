@@ -1,3 +1,12 @@
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_1.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_2.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_3.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_4mob.css");
+body {
+  overflow-x: hidden; /* Скрывает вертикальную полосу прокрутки */
+  overflow-y: visible; /* Оставляет горизонтальную полосу прокрутки видимой */
+}
+
 body:after {
   background-image: url(https://i.ibb.co/KXmvcwC/chrome-1-Ow0m-MOWx-S.png);
 }
@@ -125,44 +134,9 @@ img[title="IvanAstran"] {
     --hundred: 1;
   }
 }
-
-.activity .graph.vertical .line .bar {
-  box-sizing: content-box;
-  transform: translateY(1px);
-  transform-origin: center bottom;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 1.5s;
-  animation-name: activity;
-}
-.activity .graph.vertical .line .bar:hover {
-  animation-name: none;
-  transform: none;
-}
-.activity .graph.vertical .line:nth-of-type(6n+2) .bar {
-  animation-delay: -.25s;
-}
-.activity .graph.vertical .line:nth-of-type(6n+4) .bar {
-  animation-delay: -.5s;
-}
-.activity .graph.vertical .line:nth-of-type(6n+3) .bar {
-  animation-delay: -.75s;
-}
-.activity .graph.vertical .line:nth-of-type(6n+6) .bar {
-  animation-delay: -1s;
-}
-.activity .graph.vertical .line:nth-of-type(6n+5) .bar {
-  animation-delay: -1.25s;
-}
-@keyframes activity {
-  0%, 100% {
-    transform: translateY(1px);
-  }
-  50% {
-    transform: translateY(7px);
-  }
-}
+/*
+@import url("https://raw.githubusercontent.com/dragenge/dragenge.github.io/master/cssfiles/q05_animated_activity_graph.css");
+/* 
 
 /*Попробую потом изменить*/
 header .header-menu__item--comments {
@@ -181,3 +155,402 @@ header .header-menu__item--comments {
 .block.avatar {
     display: none;
 }
+
+
+
+
+.p-profiles.p-achievements .b-achievement > .c-image > .inner:after {
+   max-width: 205%;
+   width: 204%;
+   height: 206%;
+   margin-left: -4%;
+   border-radius: 11px;
+}
+.p-profiles .b-achievement > .c-image > .inner:after {
+   position: absolute;
+   display: block;
+   content: "";
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   visibility: visible !important;
+   z-index: auto;
+}
+
+.p-profiles .b-achievement[data-hint^="Фэнтези 1 уровня"] .inner img {
+   visibility: hidden;
+}
+
+.p-profiles .b-achievement[data-hint^="Фэнтези 1 уровня"] .inner:after {
+   box-shadow: 0 0 2px 1px #e4ba54; /*Золотая рамка*/
+   background-image: url("https://i.ibb.co/vQ3sM1F/m2-res-720p-1-1.gif");
+}
+
+
+
+
+@media (min-width:768px) { 
+
+.cc-2>.c-column:nth-child(3) {
+    width: 100%;
+}
+
+
+.cc-franchises {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 10px;
+}
+
+.p-profiles-show .achievements .cc-franchises .b-badge {
+    width: 100%;
+}
+
+.l-page { 
+    margin-top: 25px; /* отступ от верхней менюшки */
+    border-radius: 20px; /* закругленные углы */
+  }
+  /* Анимация */
+  .l-page{
+    box-shadow: none;
+    animation-name: l-page-shadow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+  /* Цвета и фреймы анимации */
+  @keyframes l-page-shadow {
+    0% {box-shadow:0 0 16px 4px rgba(181,53,172,0.6)}
+    10% {box-shadow:0 0 16px 4px rgba(181,53,112,0.6)}
+    20% {box-shadow:0 0 16px 4px rgba(208,60,198,0.6)}
+    30% {box-shadow:0 0 16px 4px rgba(53,171,181,0.6)}
+    40% {box-shadow:0 0 16px 4px rgba(208,60,129,0.6)}
+    50% {box-shadow:0 0 16px 4px rgba(53,181,114,0.6)}
+    60% {box-shadow:0 0 16px 4px rgba(60,197,208,0.6)}
+    70% {box-shadow:0 0 16px 4px rgba(53,77,181,0.6)}
+    80% {box-shadow:0 0 16px 4px rgba(60,208,131,0.6)}
+    90% {box-shadow:0 0 16px 4px rgba(181,53,137,0.6)}
+    100%{box-shadow:0 0 16px 4px rgba(60,89,208,0.6)}
+  }
+
+
+#profiles_show .achievements .cc-2 > .c-column:first-child, #profiles_show .achievements .cc-2 > .c-column:nth-child(2) {
+  margin-left:0;
+  margin-right:0;
+  width:100%;
+}
+#profiles_show .achievements .cc-2 > .c-column:nth-child(3), #profiles_show .achievements .cc-2 > .c-column:nth-child(4) {
+  margin-bottom:7px;
+  margin-right:0;
+  width:100%;
+}
+#profiles_show .achievements .cc-2 > .c-column:nth-child(4) {
+  margin-bottom:0;
+  margin-left:0;
+  margin-top:0;
+}
+#profiles_show.p-profiles-show .achievements .cc-franchises .b-badge {
+  margin:3px 2% -3.65% 0;
+}
+#profiles_show .achievements .cc-2 > .c-column:first-child, #profiles_show .achievements .cc-2 > .c-column:nth-child(2) {
+  margin-left:0;
+  margin-right:0;
+  width:100%;
+}
+#profiles_show .achievements .cc-2 > .c-column:nth-child(3), #profiles_show .achievements .cc-2 > .c-column:nth-child(4) {
+  margin-bottom:0;
+  width:49.5%;
+}
+#profiles_show .achievements .cc-2 > .c-column:nth-child(3) {
+  margin-right:1%;
+}
+#profiles_show .achievements .cc-2 > .c-column:nth-child(4) {
+  margin-left:0;
+  margin-top:0;
+}
+#profiles_show.p-profiles-show .achievements .cc-franchises .b-badge {
+  margin:4px 4.3% -3% 0;
+  width:29%;
+}
+#profiles_show .achievements .cc-authors .b-achievement:nth-child(5), #profiles_show .achievements .cc-authors .b-achievement:nth-child(6) {
+  display:inherit;
+}
+#profiles_show .achievements .cc-authors {
+  flex-wrap:wrap;
+  position:relative;
+  right:1px;
+}
+#profiles_show.p-profiles-show .achievements .cc-authors .b-achievement {
+  margin:16.75px 1.25% -0.5px;
+  width:30.8%;
+}
+#profiles_show .cc-franchises {
+  flex-wrap:wrap;
+  justify-content:center;
+  left:6px;
+  position:relative;
+}
+#profiles_show.p-profiles-show .achievements .cc-franchises .b-badge:nth-child(5), #profiles_show.p-profiles-show .achievements .cc-franchises .b-badge:nth-child(6) {
+  display:block;
+}
+.p-profiles.p-achievements .b-achievement > .c-image > .inner::after {
+  border-radius:11px;
+  height:106%;
+  margin-left:-2%;
+  max-width:105%;
+  width:104%;
+}
+.p-profiles .b-achievement > .c-image > .inner::after {
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  content:"";
+  display:block;
+  height:100%;
+  left:0;
+  position:absolute;
+  top:0;
+  visibility:visible !important;
+  width:100%;
+  z-index:auto;
+}
+.p-profiles .b-achievement[data-hint^="Романтика"] .inner img, .p-profiles .b-achievement[data-hint^="Сверхъестественное"] .inner img, .p-profiles .b-achievement[data-hint^="Фэнтези 3 уровня"] .inner img, .p-profiles .b-achievement[data-hint^="300 просмотренных аниме"] .inner img, .p-profiles .b-achievement[data-hint^="Безумие / Психологическое"] .inner img, .p-profiles .b-achievement[data-hint^="Комедия"] .inner img, .p-profiles .b-achievement[data-hint^="Фантастика"] .inner img, .p-profiles .b-achievement[data-hint^="Детектив"] .inner img, .p-profiles .b-achievement[data-hint^="Кудере"] .inner img, .p-profiles .b-achievement[data-hint^="Хоррор / Триллер"] .inner img, .p-profiles .b-achievement[data-hint^="Драма"] .inner img {
+  visibility:hidden;
+}
+.p-profiles .b-achievement[data-hint^="300 просмотренных аниме"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/6cc65856d5aaa4ba2c723097ae833cf5a5521211?url=https%3A%2F%2Fi.ibb.co%2FjgPSdDj%2F1-2023-06-02-18-35-28.gif");
+  box-shadow:#F87C00 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Комедия"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/9f22ce9ef6529895ce3f36d75fed73c3d52e4787?url=https%3A%2F%2Fi.ibb.co%2FvJbzy2s%2FX1n4mn6.gif");
+  box-shadow:#D34A3F 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Фантастика"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/dd46bede61c0fb8648971f6b786e789ccb4a6b89?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F95%2F0a%2F3a%2F950a3adc5672f820b3d42443b5bcd851.gif");
+  box-shadow:#FF008F 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Хоррор / Триллер"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/b57745e7dc79ec69beed17a41848613c70afd1e1?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F4a%2F96%2F43%2F4a964343b5725723ed118355b1a520ea.gif");
+  box-shadow:#54E454 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Кудере"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/ed7b7d7a0886dd4f94c736b56c887af08d570026?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F5a%2Fe0%2Fda%2F5ae0daba925fa83c3632ba85ae75f371.gif");
+  box-shadow:#54E454 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Детектив"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/01bec610786054b9376aaab1af4698e8349313f1?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F0b%2Ffc%2Fe3%2F0bfce31c19cbf8f7745a4bc1e51cf8a5.gif");
+  box-shadow:#783F04 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Фэнтези 3 уровня"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/b6bc23f88023d699faa6f4339607d482ad303261?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F41%2F3d%2F6a%2F413d6a22a316d33048accefdf160778e.gif");
+  box-shadow:#8E7CC3 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Безумие / Психологическое"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/f37769130030e2ab6b571934e0e9de18e051b353?url=https%3A%2F%2Fi.ibb.co%2F6ZM8zmz%2F5d93nxs.gif");
+  box-shadow:#EB1E5B 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Романтика"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/9da2125be2990d69aa211d6813ddfe2b72b56ae6?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F9a%2F13%2F72%2F9a13720854356e961bbe242e6c252b6f.gif");
+  box-shadow:#54E454 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Драма"] .inner::after {
+  background-image:url("//i.imgur.com/trzofZt.gif");
+  box-shadow:#FCE5CD 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Сверхъестественное"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/888e92f426cdcfdb9b7dc2b81ea3fd4fd1a86829?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F0c%2F14%2Fcf%2F0c14cfd2a11928ecfbc3b5be96f348a4.gif");
+  box-shadow:#A9A9A9 0 0 2px 1px;
+}
+.p-profiles .b-achievement[data-hint^="Хоррор / Триллер"] .inner::after {
+  background-image:url("https://camo-v3.shikimori.me/e818eb4481ffdfdd975d7f84fa0333c5199b1640?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F11%2F0d%2F2c%2F110d2cc991dc73c0ff940e53533b7c00.gif");
+  box-shadow:#39011E 0 0 2px 1px;
+}
+#profiles_show .achievements .cc-franchises .b-badge {
+  border-radius:0.375rem;
+}
+#profiles_show .cc-franchises {
+  flex-wrap:wrap;
+  justify-content:center;
+  left:7px;
+  position:relative;
+}
+#profiles_show.p-profiles-show .achievements .cc-franchises .b-badge {
+  margin:3px 3% -2.75% 0;
+}
+#profiles_show .achievements .cc-2 > .c-column:nth-child(4) {
+  margin-top:-5px;
+}
+#profiles_show.p-profiles-show .achievements .cc-franchises .b-badge:nth-child(5), #profiles_show.p-profiles-show .achievements .cc-franchises .b-badge:nth-child(6), #profiles_show.p-profiles-show .achievements .cc-franchises .b-badge:nth-child(7), #profiles_show.p-profiles-show .achievements .cc-franchises .b-badge:nth-child(8) {
+  display:block;
+}
+#profiles_show .cc-franchises .b-badge::after {
+  background-size:cover;
+  border-radius:0.5rem;
+  box-shadow:none !important;
+  content:"";
+  height:calc(76% - 4px);
+  left:2px;
+  pointer-events:none;
+  position:absolute;
+  top:2px;
+  width:calc(107% - 4px);
+}
+#profiles_show .cc-franchises .b-badge::before {
+  background:none;
+  border-radius:0.5rem;
+  content:"";
+  font-size:0;
+  height:76%;
+  left:0;
+  opacity:1;
+  pointer-events:auto;
+  position:absolute;
+  top:0;
+  transition:all 0s ease-out 0s, box-shadow 0.2s ease-out 0s, transform 0.2s ease-out 0s;
+  visibility:visible !important;
+  width:107%;
+}
+#profiles_show a.b-badge:hover::before {
+  background:none;
+  box-shadow:none;
+}
+#profiles_show .cc-franchises .b-badge[href$="/shingeki_no_kyojin"] img, #profiles_show .cc-franchises .b-badge[href$="/sword_art_online"] img, #profiles_show .cc-franchises .b-badge[href$="/demon_slayer"] img, #profiles_show .cc-franchises .b-badge[href$="/danmachi"] img, #profiles_show .cc-franchises .b-badge[href$="/yahari_ore_no_seishun_love_comedy_wa_machigatteiru"] img, #profiles_show .cc-franchises .b-badge[href$="/bakemonogatari"] img, #profiles_show .cc-franchises .b-badge[href$="/fate"] img, #profiles_show .cc-franchises .b-badge[href$="/overlord"] img, #profiles_show .cc-franchises .b-badge[href$="/boku_no_hero_academia"] img {
+  visibility:hidden;
+}
+#profiles_show .cc-franchises .b-badge[href$="/shingeki_no_kyojin"]:hover::before, #profiles_show .cc-franchises .b-badge[href$="/sword_art_online"]:hover::before, #profiles_show .cc-franchises .b-badge[href$="/demon_slayer"]:hover::before, #profiles_show .cc-franchises .b-badge[href$="/danmachi"]:hover::before, #profiles_show .cc-franchises .b-badge[href$="/yahari_ore_no_seishun_love_comedy_wa_machigatteiru"]:hover::before, #profiles_show .cc-franchises .b-badge[href$="/bakemonogatari"]:hover::before, #profiles_show .cc-franchises .b-badge[href$="/fate"]:hover::before, #profiles_show .cc-franchises .b-badge[href$="/overlord"]:hover::before, #profiles_show .cc-franchises .b-badge[href$="/boku_no_hero_academia"]:hover::before {
+  box-shadow:rgba(62, 62, 62, 0.85) -20px 20px 0 -17px, #383838 20px -20px 0 -17px, rgba(0, 0, 0, 0.8) 20px 20px 0 -20px, rgba(0, 0, 0, 0.8) 0 0 0 2px;
+}
+#profiles_show .cc-franchises .b-badge[href$="/shingeki_no_kyojin"]::after {
+  background-image:url("https://camo-v3.shikimori.me/620da151e64949384703caa3a7e8fed02c2ad89c?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F79%2F28%2F79%2F7928798bbdeda1d1cb82adb1f14e99cf.gif");
+}
+#profiles_show .cc-franchises .b-badge[href$="/sword_art_online"]::after {
+  background-image:url("https://camo-v3.shikimori.me/c64b333ef198524bc66140569cc1914e657516c4?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F13%2Fb5%2F39%2F13b539259682d6af1d93265975f9f8a2.gif");
+}
+#profiles_show .cc-franchises .b-badge[href$="/demon_slayer"]::after {
+  background-image:url("https://camo-v3.shikimori.me/be60bf7a30fbc54240f1503039273652cf5278c1?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fc9%2Fdb%2F10%2Fc9db1096409933ce1c7c6c18670cc633.gif");
+}
+#profiles_show .cc-franchises .b-badge[href$="/danmachi"]::after {
+  background-image:url("https://camo-v3.shikimori.me/dc590b699d2f427e148de566807c2beb1b887aa5?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fe5%2F01%2F67%2Fe50167085541335ee5a1dfd20af9288a.gif");
+}
+#profiles_show .cc-franchises .b-badge[href$="/yahari_ore_no_seishun_love_comedy_wa_machigatteiru"]::after {
+  background-image:url("https://camo-v3.shikimori.me/e553d2b2fcd6d159d48aa5a0be5bed6686bdc684?url=https%3A%2F%2Fmedia.tenor.com%2FmBEtS-k6mdYAAAAC%2Fyukino-yukinoshita.gif");
+}
+#profiles_show .cc-franchises .b-badge[href$="/bakemonogatari"]::after {
+  background-image:url("https://camo-v3.shikimori.me/3563ca5fe0dfaec9f89349b97214cee4e4ae8376?url=https%3A%2F%2Fi.ibb.co%2FfNb5vcv%2Fvideo-2023-05-27-23-21-00.gif");
+}
+#profiles_show .cc-franchises .b-badge[href$="/boku_no_hero_academia"]::after {
+  background-image:url("https://camo-v3.shikimori.me/2811a2f710351e8224ea8fb4384d747fc6ed13f4?url=https%3A%2F%2Fi.ibb.co%2F7R8S81b%2Fdoc-2023-05-12-09-42-21.gif");
+}
+#profiles_show .cc-franchises .b-badge[href$="/fate"]::after {
+  background-image:url("https://camo-v3.shikimori.me/dbd348e7848323f95c5c4bf3fc732056a3cd249f?url=https%3A%2F%2Fi.ibb.co%2F7yTV1LN%2Fimage.gif");
+}
+#profiles_show .cc-franchises .b-badge[href$="/overlord"]::after {
+  background-image:url("https://camo-v3.shikimori.me/53816bcba57d649d562b5d9ca7f0a1e31225ebe5?url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F17%2Ffd%2F1c%2F17fd1c46c7504d24d6a5dec79131ce32.gif");
+}
+.activity .graph.vertical .line .bar {
+  animation-duration:1.5s;
+  animation-fill-mode:both;
+  animation-iteration-count:infinite;
+  animation-name:activity;
+  animation-timing-function:linear;
+  box-sizing:content-box;
+  transform:translateY(1px);
+  transform-origin:center bottom;
+}
+.activity .graph.vertical .line .bar:hover {
+  animation-name:none;
+  transform:none;
+}
+.activity .graph.vertical .line:nth-of-type(6n+2) .bar {
+  animation-delay:-0.25s;
+}
+.activity .graph.vertical .line:nth-of-type(6n+4) .bar {
+  animation-delay:-0.5s;
+}
+.activity .graph.vertical .line:nth-of-type(6n+3) .bar {
+  animation-delay:-0.75s;
+}
+.activity .graph.vertical .line:nth-of-type(6n+6) .bar {
+  animation-delay:-1s;
+}
+.activity .graph.vertical .line:nth-of-type(6n+5) .bar {
+  animation-delay:-1.25s;
+}
+
+.b-spoiler label {
+  border:2px dashed rgba(165, 170, 230, 0);
+  border-radius:6px;
+  color:rgba(var(--light-color), 1);
+  padding:0 6px;
+  transition:all 0.2s ease 0s, -webkit-0 0.2s ease 0s, width 0s ease 0s, margin 0s ease 0s, padding 0s ease 0s, font-size 0s ease 0s, height 0s ease 0s, top 0s ease 0s, left 0s ease 0s, line-height 0s ease 0s, min-height 0s ease 0s;
+}
+
+
+
+
+/*
+.block > .cc-favourites {
+  display: none;
+}
+.block > .subheadline {
+  display: none;
+}
+
+.bar.simple .bar.s3 {
+  background: #9b4dca;
+  filter: brightness(85%);
+}
+
+.bar.simple .bar:hover.s3 {
+  background: #c278e0;
+  filter: brightness(85%);
+}
+
+.bar.simple .bar.s2 {
+  background: #ff80ff;
+  filter: brightness(85%);
+}
+
+.bar.simple .bar:hover.s2 {
+  background: #ff9fff;                                  Изменить цвет графика
+  filter: brightness(85%);
+}
+
+.bar.simple .bar.s1 {
+  background: #ff99cc;
+  filter: brightness(85%);
+}
+
+.bar.simple .bar:hover.s1 {
+  background: #ffb3d9;
+  filter: brightness(85%);
+}
+
+.bar.simple .bar.s0 {
+  background: #ffccff;
+  filter: brightness(85%);
+}
+
+.bar.simple .bar:hover.s0 {
+  background: #ffd9e6;
+  filter: brightness(85%);
+}
+/*
+
+
+
+
+
+
+
+/*Изменить css стиль для телефоно*/
+@media (max-width: 768px) {
+
+}
+
+
+
